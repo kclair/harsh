@@ -16,10 +16,10 @@ namespace :harsh do
       
       tmpfolder = File.join(File.dirname(__FILE__), "..", "tmp")
       FileUtils.mkdir_p tmpfolder
-      FileUtils.mkdir_p File.join(RAILS_ROOT,"/public/stylesheets/harsh/")
+      FileUtils.mkdir_p File.join(::Rails.root.to_s,"/public/stylesheets/harsh/")
       
       puts "Generating themes..."
-      `uv -s ruby --copy-files #{tmpfolder} #{File.dirname(__FILE__)+"/../README.markdown"}`
+      `uv -s ruby --copy-files #{tmpfolder} #{File.dirname(__FILE__)+"/../../README.markdown"}`
       
       puts "Copying #{args[:theme]}.css..."
       FileUtils.cp File.join(tmpfolder, "css", "#{args[:theme]}.css"), File.join(RAILS_ROOT, "public", "stylesheets", "harsh")
