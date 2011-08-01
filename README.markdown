@@ -2,6 +2,8 @@ harsh
 =====
 * http://www.carboni.ca/
 
+Now Rails 3 compatible!
+
 DESCRIPTION:
 ============
 "Harsh: Another Rails Syntax Highlighter," is just that - it highlights code
